@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+{% block body %}
+<h2>Ask Question</h2>
+<br>
+<div class="form">
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <br>
+        {{ form.username.label }} {{ form.username }}
+        <br>
+        {{ form.subject.label }} {{ form.subject }}
+        <br>
+        {{ form.ask_question.label }} {{ form.ask_question }}
+        <br>
+        {{ form.submit }}
+
+    </form>
+</div>
+{% endblock body %}

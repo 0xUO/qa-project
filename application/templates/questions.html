@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+{% block body %}
+        <h2>Questions</h2>    
+        {% for question in questions %}
+        {{ question.ask_question }}
+        <br>
+        {% endfor %}
+        
+{% endblock body %}

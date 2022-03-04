@@ -2,9 +2,10 @@
     <head>
         <title>QAQ&A</title>
     </head>
-    <body style="background-color: lightblue;">
-        <h1>ToDo</h1>
-        <a href="{{ url_for('index') }}">Home</a> || 
+    <body style="background-color: rgba(206, 192, 113, 0.808);">
+        <h1>QAQ&A</h1>
+        <a href="{{ url_for('index') }}">Home</a> || <a href="{{ url_for('ask') }}">Ask</a> || <a href="{{ url_for('questions') }}">Questions</a> 
+        || <a href="{{ url_for('users') }}">Users</a> || <a href="{{ url_for('register') }}">Register</a> 
         {% block body %}
         {% endblock body %}
     </body>

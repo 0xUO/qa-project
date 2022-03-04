@@ -2,14 +2,17 @@ from application import db
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key = True)
-    name = db.Column(db.String(20))
-    pwd = db.Column(db.String(50))
-    honourable = db.Column(db.Boolean)
-    admin = db.Column(db.Boolean)
+    username = db.Column(db.String(20))
+    password = db.Column(db.String(20))
+    questions = db.relationship('Question', foreign_keys='Question.asked_by_id', backref='user', passive_deletes=True)
+    def __str__(self):   
+        return f"{self.username}"
 
 class Question(db.Model):
     id = db.Column(db.Integer, primary_key = True)
-    question = db.Column(db.Text)
-    answr = db.Column(db.Text)
+    subject = db.Column(db.Text)
+    ask_question = db.Column(db.Text)
     asked_by_id = db.Column(db.Integer, db.ForeignKey('user.id'))
-    honourable_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    def __str__(self):   
+        return f"{self.asked_by_id}:\n{self.subject}:\n{self.ask_question}"
+
