@@ -1,7 +1,8 @@
 from flask import redirect, url_for, render_template, request
 from application import app, db
 from application.models import User, Question
-from application.forms import AskQuestion, CreateUser
+from application.forms import CreateUser, AskQuestion
+from application.forms import CreateUser
 
 @app.route('/')
 def index():
@@ -16,7 +17,7 @@ def register():
         new_user = CreateUser(username = username, password = password)
         db.session.add(new_user)
         db.session.commit()
-        return redirect(url_for('users.html'))
+        return redirect(url_for('users'))
     return render_template('register.html', form = form)
 
 @app.route('/ask', methods=['GET', 'POST'])
@@ -29,15 +30,15 @@ def ask():
         new_question = Question(username = username, subject = subject, ask_question = ask_question)
         db.session.add(new_question)
         db.session.commit()
-        return redirect(url_for('questions.html'))
+        return redirect(url_for('questions'))
     return render_template('ask.html', form = form)
 
 @app.route('/questions', methods=['GET', 'POST'])
 def questions():
-    questions = '<br>'.join(str(i) for i in Question.query.all())
-    return render_template('questions.html', questions=questions)
+    quest = Question.query.all()
+    return render_template('questions.html', q = quest)
 
 @app.route('/users', methods=['GET', 'POST'])
 def users():
-    list_users = '<br>'.join(str(i) for i in User.query.all())
-    return render_template('users.html', list_users = list_users)
+    list_users = User.query.all()
+    return render_template('users.html', lst = list_users)
