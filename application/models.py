@@ -4,16 +4,20 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     username = db.Column(db.String(20))
     password = db.Column(db.String(20))
-    questions = db.relationship('Question', foreign_keys='Question.asked_by_id', backref='user', passive_deletes=True)
+
+    aksed_by_id = db.relationship('Question', backref='user', passive_deletes=True)
+
     def __str__(self):   
-        return f"{self.username}"
+        return f"{self.id}: {self.username}"
 
 class Question(db.Model):
-    id = db.Column(db.Integer, primary_key = True)
-    username = db.Column(db.Text, db.ForeignKey('user.username'))
+    q_id = db.Column(db.Integer, primary_key = True)
     subject = db.Column(db.Text)
     ask_question = db.Column(db.Text)
+    email = db.Column(db.Text)
+    answered = db.Column(db.Boolean)
     asked_by_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    
     def __str__(self):
-        return f"{self.asked_by_id}:\n{self.subject}:\n{self.ask_question}"
-
+        return f"Question ID: {self.q_id} || User ID: {self.asked_by_id} || \n Subject: {self.subject} || \n Question: {self.ask_question}\
+             || \n Asker Email: {self.email} ||| \n This Question been answered ?  :::  {self.answered}  ::: "
