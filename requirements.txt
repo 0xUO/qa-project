@@ -6,7 +6,7 @@ wtforms
 pytest
 flask-testing
 pytest-cov
-selenuim
+
 
 #pip3 install -r requirements.txt
 
