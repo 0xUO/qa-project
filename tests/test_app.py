@@ -18,7 +18,7 @@ class TestBase(TestCase):
     def setUp(self):
         db.create_all()
         sample_user = User(username = "anon", password = "test")
-        sample_question = Question(subject = "Random", ask_question = "what is 5 + 5", email = 'test@gmail.com', asked_by_id = 'anon')
+        sample_question = Question(subject = "Random", ask_question = "what is 5 + 5", email = 'test@gmail.com', asked_by_id = 1)
 
         db.session.add(sample_user)
         db.session.add(sample_question)
@@ -64,11 +64,28 @@ class TestAskQuestion(TestBase):
     def test_ask_post(self):
         response = self.client.post(
             url_for('ask'),
-            data = dict(subject = 'Random', ask_question = '1+1?', email = 'testo@gmail.com', asked_by_id = 'anon'),
+            data = dict(subject = 'Random', ask_question = '1+1?', email = 'testo@gmail.com', asked_by_id = 1),
             follow_redirects = True
         )
         self.assert200(response)
         self.assertIn(b'Random', response.data)
+
+#-----------------------------------------------------------------------
+
+class TestDelete2(TestBase):
+    def test_delete2(self):
+        response = self.client.get(url_for('delete',q_id=1), follow_redirects = True)
+        self.assert200(response)
+        self.assertNotIn(b"what is 5 + 5", response.data)
+
+class TestUpdate(TestBase):
+    def test_update(self):
+        response = self.client.get(
+            url_for('update', q_id=1),
+            follow_redirects=True
+        )
+        self.assert200(response)
+        self.assertIn(b'True', response.data)
 
 # python3 -m pytest
 

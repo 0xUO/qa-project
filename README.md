@@ -15,7 +15,7 @@ Update the status of questions whether they have been answered or not (update fu
 Delete questions(delete functionality).
 
 The database for this program comprises of a Users table and a Questions table which assiciates with multiple questions to one user(One-To-Many relationship).
-The ERD is displayed below:
+The ERD is displayed below: 
 
 -Insert ERD Here
 
@@ -26,7 +26,7 @@ With this modification, the ERD would look like so:
 
 CI Pipeline ---
 
-
+In addition to the above requirements, the project
 
 Trello Board:  https://trello.com/b/5dGh4hhf/todo
 
