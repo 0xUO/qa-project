@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+{% block body %}
+        <h2>Questions</h2>
+        {% for q in qs %}    
+        {{ q.__str__() }}
+        <a href="/update/{{ q.q_id }}">Update</a> 
+        ||| <a href="/delete/{{ q.q_id }}">Delete</a>
+        <br> 
+
+        {% endfor %}
+{% endblock body %}

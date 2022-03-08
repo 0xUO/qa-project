@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+{% block body %}
+        <h2>Users</h2>
+        {% for u in lst %}    
+        {{ u.__str__() }}
+        <br>  
+        {% endfor %}
+{% endblock body %}
+
+

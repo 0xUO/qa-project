@@ -1,8 +1,32 @@
 PROJECT DESCRIPION --
 
-A question and answer webpage where users can ask questions/problems to the community and others can answer the asked questons.
+The breif for this porject was to design and produce a web app of my choice. 
+The requirements for the application; included CRUD (create, read update and delete) functionality,
+Flask micro-framework, and had to store inofrmation into a MySQL database with a minimum of two tables sharing a one-to-many ralationship:
+The Structure is displayed below:
 
-PROJECT PLAN ---
+-Insert Picture Here
+
+App Design ---
+
+I have chosen to build a question-bank app, which allows users to write questions to the bank(create functionality).
+View questions that have been posted by other users(read functionality).
+Update the status of questions whether they have been answered or not (update functionality).
+Delete questions(delete functionality).
+
+The database for this program comprises of a Users table and a Questions table which assiciates with multiple questions to one user(One-To-Many relationship).
+The ERD is displayed below: 
+
+-Insert ERD Here
+
+The target for future modifications of the project will be an answers category that directly stores users answers for questions though an answers table.
+With this modification, the ERD would look like so:
+
+- Insert What New ERD owuld look like here
+
+CI Pipeline ---
+
+In addition to the above requirements, the project
 
 Trello Board:  https://trello.com/b/5dGh4hhf/todo
 
