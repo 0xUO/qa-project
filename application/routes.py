@@ -58,26 +58,3 @@ def delete(q_id):
     db.session.delete(question)
     db.session.commit()
     return redirect(url_for('questions'))
-
-
-#----------------------------------------------------------
-# @app.route('/users/delete/<int:i>')
-# def delete_user(i):
-#     users = User.query.get(i)
-#     db.session.delete(users)
-#     db.session.commit()
-#     return redirect(url_for('users'))
-
-# @app.route('/delete/<int:i>')
-# def delete3(i):
-#     question = Question.query.get(i)
-#     db.session.delete(question)
-#     db.session.commit()
-#     return redirect(url_for('users'))
-
-# @app.route('/questions/delete_question/<int:q_id>')
-# def delete(q_id):
-#     question = Question.query.filter_by(id=q_id).first()
-#     db.session.delete(question)
-#     db.session.commit()
-#     return redirect(url_for('questions'))

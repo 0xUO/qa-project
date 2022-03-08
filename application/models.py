@@ -19,5 +19,5 @@ class Question(db.Model):
     asked_by_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     
     def __str__(self):
-        return f"Question ID: {self.q_id} || User ID: {self.asked_by_id} || \n Subject: {self.subject} || \n Question: {self.ask_question}\
+        return f"Question ID: {self.q_id} || Username: {self.user.username} || User ID: {self.asked_by_id} || \n Subject: {self.subject} || \n Question: {self.ask_question}\
              || \n Asker Email: {self.email} ||| \n This Question been answered ?  :::  {self.answered}  ::: "
