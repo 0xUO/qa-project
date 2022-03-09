@@ -91,7 +91,7 @@ Users can post any questions they like using the ask page, this requires users t
 
 Users can view all the posts that have been created on the questions page and have the ability to delete any post which removes the question from the database and also has the abiliy to update any post which changes the state of the question a to where the question has been answered or not.
 
-![QuestionPage](figures/questionspage.png)
+![QuestionPage](figures/questionpage.png)
 
 ## ISSUES: ---
 
