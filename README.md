@@ -33,6 +33,9 @@ In addition to the requirements, the project required implementation of some sta
 
 Trello Board:  https://trello.com/b/5dGh4hhf/todo
 
+Venv:Python Virtual Environment
+A python3 virtual evirnonment running ubuntu was used to develop the program. Flask is a python based frome-work that was also used.
+
 Git:Version Control
 Git was used for the version control of the project, the repository was hosted on github. 
 Version Control with git allows changes to be make and commited to the project with access of commit history to acesses earlier versions. Using github provides webhooks which sends http POST requests to a build server to automate building and testing.
@@ -50,19 +53,19 @@ The risk assessment is displayed below with how the measures could be implemente
 
 ![Risk Assessment](figures/RiskAssessment.png)
 
+
 ## TESTING: ---
 
 Testing the application was an essential portion of the development process. 
-Unit Testing:Pytest
-Unit testing was used to test functions/functionality of the app. Unit tests were written to ensure the Create, Read, Update and Delete functions worked correctly.
-These tests were automated through Jenkins using webhooks. A successful build in which ass tests passed is displayed below.
 
+Unit testing was used to test functions/functionality of the app. Unit tests were written to ensure the Create, Read, Update and Delete functions worked correctly.
+These tests were automated through Jenkins using webhooks.
 A Coverage report shows what percentage of statements were included in the tests, this was outputted as HTML files.
-Below is a visualisation of the coverage report
+Below is a visualisation of the coverage report.
 
 ![CoverageReport](figures/CoverageReport.png)
 
-This shows that 99% overall coverage. All tests must pass for the build to be successful, a single failed test marks the overall build as failed.
+Another form of testing that could be used is Intergration testing using selenum. This would be used to also test the the functions of the program in a virtual live envirnment. This form of testing would be able to simulate keyboard input and mouse clicks to ensure these elements of the program work as intended. Intergration test would be written for all the forms within the app to test their functionality. 
 
 ## The APP: ---
 
@@ -91,12 +94,18 @@ Users can post any questions they like using the ask page, this requires users t
 
 Users can view all the posts that have been created on the questions page and have the ability to delete any post which removes the question from the database and also has the abiliy to update any post which changes the state of the question a to where the question has been answered or not.
 
-![QuestionPage](figures/questionpage.png)
+![QuestionPage](figures/questionspage.png)
+
+## UPDATES: ---
+
+- Add answers section under each question
+- Change colour scheme 
+- Categorise questions
 
 ## ISSUES: ---
 
-Any user is able to update the status of any question where they asked the question or not
-Any user is able to delete  any question whether they asked the question or not
+Any user is able to update the status of any question whether they asked the question or not
+Any user is able to delete any question whether they asked the question or not
 
 ## Future Work: ---
 
