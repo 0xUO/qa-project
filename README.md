@@ -112,5 +112,7 @@ Any user is able to delete any question whether they asked the question or not
 ## Future Work: ---
 
 In future sprints, i would like to add a feature that allows users to answer questions directly under each post rather than only having the option to mark if a question has been answered through a true or false button as as it stands, questions can only be answered through the email address contact inofrmatoin the asker leaves on the page. As it stands, the program was only desgined this way to meet requirements but has room the upgrade and scale function in the future. 
+
 I would also like to add a chat page where users can chat amougnst each other in one big group chat.
+
 Lastly i would like to update the register/user page to give more security and validation upon creating user accounts. Furthermore, i would like to add user profile where users have have their own profile dedicated to them with all the questions they have asked and answered along with a points system for their amount of contribution.
