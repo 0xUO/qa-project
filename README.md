@@ -14,7 +14,7 @@ View questions that have been posted by other users(read functionality).
 Update the status of questions whether they have been answered or not (update functionality).
 Delete questions(delete functionality).
 
-The database for this program comprises of a Users table and a Questions table which assiciates with multiple questions to one user(One-To-Many relationship).
+The database for this program comprises of a Users table and a Questions table which associates with multiple questions to one user(One-To-Many relationship).
 The ERD is displayed below: 
 
 ![ERD](figures/ERD.png)
@@ -53,11 +53,9 @@ The risk assessment is displayed below with how the measures could be implemente
 ## TESTING: ---
 
 Testing the application was an essential portion of the development process. 
-Unit Testing:
+Unit Testing:Pytest
 Unit testing was used to test functions/functionality of the app. Unit tests were written to ensure the Create, Read, Update and Delete functions worked correctly.
 These tests were automated through Jenkins using webhooks. A successful build in which ass tests passed is displayed below.
-
-- Insert Tests screenshot here
 
 A Coverage report shows what percentage of statements were included in the tests, this was outputted as HTML files.
 Below is a visualisation of the coverage report
@@ -68,30 +66,32 @@ This shows that 99% overall coverage. All tests must pass for the build to be su
 
 ## The APP: ---
 
-When navigating the app, the user is presented with the Homepage
+When navigating the app, the user is presented with the Homepage.
 
-- HomePage image
+![HomePage](figures/homepage.png)
 
-The navbar provides links which allow users to add questions, view questions, register a new user and view all the registered users
+The navbar provides links which allow users to add questions, view questions, register a new user and view all the registered users.
 
-- navbar image
+![NavBar](figures/navbar.png)
 
 To add a new question, the user would likely want to create a user for themselves first using the register page.
 this page will allow the user to create a username and password for their user.
 
-- register page image
+![RegisterPage](figures/registerpage.png)
 
-However if a user does not want to create a custom user, the first user created for the program was an 'Anon' account that allows users to ask questions under an anonymous named user account.
+However if a user does not want to create a custom user, the first user created for the program was an 'Anonymous' account that allows users to ask questions under an anonymous named user account but they would still have to use their own email when creating a question to get a response.
 
-Users can also view all the current created users to know the total amount of users of the application and also this informs whcih username are taken to help reduce any duplicate username
+Users can also view all the current created users to know the total amount of users of the application.
 
-- show users page
+![UsersPage](figures/userspage.png)
 
 Users can post any questions they like using the ask page, this requires users to input in all the fields, some fields require data for the post to be created, this includes the email first as viewers can contact the creator of any post to directly respond to the post via email address. 
 
-- show ask question page
+![AskPage](figures/askpage.png)
 
-user can view all the posts that have been created on the questions page and have the ability to delete any post which removes the question from the database and also has the abiliy to update any post which changes the state of the question a to where the question has been answered or not
+Users can view all the posts that have been created on the questions page and have the ability to delete any post which removes the question from the database and also has the abiliy to update any post which changes the state of the question a to where the question has been answered or not.
+
+![QuestionPage](figures/questionpage.png)
 
 ## ISSUES: ---
 
