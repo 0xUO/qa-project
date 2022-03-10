@@ -1,7 +1,7 @@
 ## PROJECT DESCRIPION: ---
 
 The brief for this project was to design and produce a web app of my choice. 
-The requirements for the application included; CRUD (create, read update and delete) functionality, flask micro-framework, and had to store information into a MySQL database with a minimum of two tables sharing a one-to-many ralationship:
+The requirements for the application included; CRUD functionality(create, read update and delete), flask micro-framework, and had to store information into a MySQL database with a minimum of two tables sharing a one-to-many ralationship.
 
 ## APP DESIGN: ---
 
@@ -27,9 +27,9 @@ With this modification, the ERD would look like so:
 In addition to the requirements, the project required implementation of some stages of a typical CI pipeline. These included project tracking, version control, development environment and a build server. I used Trello to track my project by creating a tracking board. Story points were assigned and MoSCoW prioritisation was used to review and complete functions as the project progressed. 
 
 Example of a User story would be;
-As a [User]
-I want to be able to view all the questons everyone post
-So that i can see other poeple contributions to the webpage
+- As a [User]
+- I want to be able to view all the questons everyone post
+- So that i can see other poeple contributions to the webpage
 
 Here is the trello board at the start of the project along with a link to view the board. 
 
@@ -38,11 +38,11 @@ Here is the trello board at the start of the project along with a link to view t
 
 Trello Board:  https://trello.com/b/5dGh4hhf/todo
 
--Venv: Python Virtual Environment:
+- Venv: Python Virtual Environment:
 
 A python3 virtual evironnment running ubuntu was used to develop the program. This was connected to through an SSH remote connection to write code in the environment. Flask is a python based frame-work that was also used in developing the program.
 
--Git: Version Control:
+- Git: Version Control:
 
 Git was used for the version control of the project, the repository was hosted on github. 
 Version Control with git allows changes to be make and commited to the project with access of commit history to access earlier versions. Using github provided webhooks which sends http POST requests to a build server to automate building and testing on Jenkins.
@@ -50,7 +50,7 @@ Functions were created and updated via different branches then merged into dev t
 
 ![Network Graph](figures/NetworkGraph.png)
 
--Jenkins: Build Server:
+- Jenkins: Build Server:
 
 Jenkins was used as a build server, this provided automation of building and testing. The automation was achieved through setting up a freestyle project which executes the test.sh script when it recieves a webhook from github when a commit is pushed from the main branch. 
 
@@ -61,7 +61,7 @@ The full pipeline used in this project is
 ## RISK ASSESSMENT: ---
 
 Before and after building the app, a risk assessment was drawn up/updated to identify the risks that could occur during the evolution of the project and how to control these risks.
-The risk assessment is displayed below with how the measures could be implemented in the app. 
+The risk assessment is displayed below with how control measures could be implemented in the app. 
 
 ![Risk Assessment](figures/RiskAssessment.png)
 
