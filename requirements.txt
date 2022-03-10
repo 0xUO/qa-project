@@ -7,6 +7,5 @@ pytest
 flask-testing
 pytest-cov
 
-
 #pip3 install -r requirements.txt
 
