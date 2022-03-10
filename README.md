@@ -72,20 +72,19 @@ Pytest was used for Unit testing the functions/functionality of the app. Unit te
 
 These functions were tested because they were the core requirements of the program and it needed to be ensured that these functions work as intended before deploying the live application.
 
-Tests were written in test_app.py python file within a test folder and a test was written for each different function to ensure each aspect was fit for purpose. 
+Tests were written in the file called test_app.pywhich was within a test folder and a test was written for each of the different functions to ensure each aspect was fit for purpose. 
 
 When writing the test file, this started with creating a TestBase class thats connects the environment to a new test database
-- This is so that our tests do not affect the same database connected to the project that already has data.
-- This test was successful and contributed to a percentage of the overall test coverage 
+- This is so that our tests do not affect the same database connected to the project that already exists with data.
 
-A setUp and tearDown function was created to create  a test user that would be tested whether it creates the user correctly and to tearDown the data that was created after we are done with the tests.
-- Creating users is a functionality of our app so we would want to ensure that users are created and stored correctly within our database
+A setUp and tearDown function was made to create a test user that would be tested whether it creates the user correctly and then to tear down the data that was created after we are done with the tests.
+- Creating users is a functionality of our app so we would want to ensure that we can connect to our database and also ensure that users can be successfully created and stored within that database.
 
-We then go on to test the GET request of each page to ensure the the correct data is displayed onto the page with no errors.
+We then go on to test the GET requests of each page to ensure that the correct data is displayed onto the page with no errors.
 
-Testing the POST requests on relevant pages followed testing the GET requests, this was to ensure that no errors occured when trying to store data. These tests also  ensured that relevant pages were redirected to a different page upon submittion.
+Testing the POST requests on relevant pages followed testing the GET requests, this was to ensure that no errors occured when trying to store data. These tests also  ensured that relevant pages were redirected to a different page upon submission if required it.
 
-- All these tests was successful and each contributed to a percentage of the overall test coverage 
+- All the tests were successful and each test contributed to a percentage of the overall test coverage.
 
 Tests were automated through Jenkins using webhooks.
 A Coverage report shows what percentage of statements were included in the tests, this was outputted as HTML files produced on Jenkins.
