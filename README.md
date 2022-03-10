@@ -63,12 +63,34 @@ Below is a visualisation of the coverage report.
 
 ![CoverageReport](figures/CoverageReport.png)
 
-Another form of testing that could be used is Intergration testing using selenum. This would be used to also test the the functions of the program in a virtual live environment. This form of testing would be able to simulate keyboard input and mouse clicks to ensure these elements of the program work as intended. Intergration test would be written for all the forms fields within the app to test their functionality.
+Another form of testing that could be used is Intergration testing using selenium. This would be used to also test the the functions of the program in a fake live environment. This form of testing would be able to simulate keyboard input and mouse clicks to ensure these elements of the program work as intended. Intergration test would be written for all the forms fields within the app to test their functionality.
+We need to test whether our components work together when intergrated together.
+We have already used integration testing to ensure our app communicates with our database and that it connects by creating new entries, updating our entries and deleting our entries etc.
 
-The step to Integration test my application would go as followed:
--
--
--
+These tests would not be able to be tested using unit testing.
+We will be testing our forms to ensure when a user sumbits data on the forms, we can simulate a user using our app/interface we provide to check it integrates properly with our backend.
+
+The step to Integration test the application using Selenuim would go as followed:
+
+- Download Selenium on our venv
+- Download Chromium Browser
+scp ~/ install chromium.sh travz@34.105.200.77:/home/travz/qa-project
+Install the driver
+- create a newfile and call it test_int.py
+from flask_testing import LiveServerTestCase
+from selenuim import webdriver
+from urllib.request import urlopen
+from flask import url_for
+- Also we would import the app and db from the application folder
+- Our forms and models would also need to be imported into this file
+- Create a TestBase class
+- Create a setUp and tearDown function
+- We would then create a class that would test given sample data that would be inputted into the fields 
+- This would be followed by a method to define our submit function to pull data from wherever it is
+This would be done by opening up the inspect element and locating the desired input box and copying the full Xpath to place inside our function and within that function we would use thr 'send_keys' method to simulate typing something in
+We would the do this process for all of our form fields 
+
+This would is the steps that would be taken to integration test our forms/app
 
 ## The APP: ---
 
