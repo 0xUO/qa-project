@@ -128,8 +128,8 @@ Users also has the abiliy to update any post which changes the state of the ques
 
 ## ISSUES: ---
 
-Any user is able to update the status of any question whether they asked the question or not
-Any user is able to delete any question whether they asked the question or not
+Any user is able to update the status of any question whether they asked the question or not.
+Any user is able to delete any question whether they asked the question or not.
 
 ## Future Work: ---
 
